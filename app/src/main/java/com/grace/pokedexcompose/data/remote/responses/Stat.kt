@@ -1,7 +1,11 @@
 package com.grace.pokedexcompose.data.remote.responses
 
+
+import com.google.gson.annotations.SerializedName
+
 data class Stat(
-    val base_stat: Int,
+    @SerializedName("base_stat")
+    val baseStat: Int,
     val effort: Int,
     val stat: StatX
 )

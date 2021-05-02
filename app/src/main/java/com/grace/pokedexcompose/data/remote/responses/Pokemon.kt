@@ -1,19 +1,28 @@
 package com.grace.pokedexcompose.data.remote.responses
 
+
+import com.google.gson.annotations.SerializedName
+
 data class Pokemon(
     val abilities: List<Ability>,
-    val base_experience: Int,
+    @SerializedName("base_experience")
+    val baseExperience: Int,
     val forms: List<Form>,
-    val game_indices: List<GameIndice>,
+    @SerializedName("game_indices")
+    val gameIndices: List<GameIndice>,
     val height: Int,
-    val held_items: List<Any>,
+    @SerializedName("held_items")
+    val heldItems: List<Any>,
     val id: Int,
-    val is_default: Boolean,
-    val location_area_encounters: String,
+    @SerializedName("is_default")
+    val isDefault: Boolean,
+    @SerializedName("location_area_encounters")
+    val locationAreaEncounters: String,
     val moves: List<Move>,
     val name: String,
     val order: Int,
-    val past_types: List<Any>,
+    @SerializedName("past_types")
+    val pastTypes: List<Any>,
     val species: Species,
     val sprites: Sprites,
     val stats: List<Stat>,

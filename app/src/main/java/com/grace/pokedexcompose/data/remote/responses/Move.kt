@@ -1,6 +1,10 @@
 package com.grace.pokedexcompose.data.remote.responses
 
+
+import com.google.gson.annotations.SerializedName
+
 data class Move(
     val move: MoveX,
-    val version_group_details: List<VersionGroupDetail>
+    @SerializedName("version_group_details")
+    val versionGroupDetails: List<VersionGroupDetail>
 )

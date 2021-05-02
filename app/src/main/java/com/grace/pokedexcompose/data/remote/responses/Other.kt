@@ -1,6 +1,11 @@
 package com.grace.pokedexcompose.data.remote.responses
 
+
+import com.google.gson.annotations.SerializedName
+
 data class Other(
-    val dream_world: DreamWorld,
-    val official-artwork: OfficialArtwork
+    @SerializedName("dream_world")
+    val dreamWorld: DreamWorld,
+    @SerializedName("official-artwork")
+    val officialArtwork: OfficialArtwork
 )
